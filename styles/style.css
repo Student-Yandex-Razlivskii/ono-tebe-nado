@@ -1,4 +1,10 @@
 /* место для вашего кода */
+
+.layout {
+  max-width: 1440px;
+  margin: auto;
+}
+
 /* Шапка */
 .header {
   display: grid;
@@ -22,7 +28,7 @@
 
 .header__link {
   color: #000;
-  font-family: Raleway;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -30,18 +36,11 @@
   text-underline-offset: 5px;
 }
 
-.header__link_active {
-  color: #000;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .header__logo {
-  width: 148px;
+  display: block;
   justify-self: center;
+  width: 148px;
+  height: 105px;
 }
 
 .header__logo-image {
@@ -55,7 +54,6 @@
 .address {
   font-size: 18px;
   max-width: 240px;
-  max-height: 97px;
   font-style: normal;
   line-height: 135%;
 }
@@ -79,7 +77,7 @@
 .cover {
   position: relative;
   z-index: 1;
-  padding: 165px 50px 50px 50px;
+  padding: 175px 50px 50px 50px;
   min-width: 1340px;
   min-height: 355px;
   color: #fff;
@@ -103,7 +101,10 @@
 .cover__title {
   font-size: 100px;
   font-weight: 700;
+  font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 30px;
+  line-height: 115%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -115,7 +116,7 @@
 
 .aligned-text_left {
   text-align: left;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .letter-spacing-extended {
@@ -124,8 +125,7 @@
 
 .aligned-text_center {
   text-align: center;
-  margin-right: 20px;
-  letter-spacing: 0.3em;
+  letter-spacing: 30px;
 }
 .aligned-text_right {
   text-align: right;
@@ -145,8 +145,11 @@
 
 .cover__description-text {
   text-transform: uppercase;
+  text-align: center;
   word-spacing: 0.8em;
   font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
   margin-right: 81px;
 }
 
@@ -154,12 +157,20 @@
   color: white;
   background-color: transparent;
   text-transform: uppercase;
-  border: 1px solid white;
+  border: 1px solid currentColor;
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: normal;
+  text-align: center;
   font-size: 20.4px;
-  padding: 14px 35px;
+  padding: 14px 39px;
+  cursor: pointer;
 }
 
-/* Конецвспомогательных элементов в Cover */
+.bet-button:hover {
+  transform: scale(1.03);
+}
+
+/* Конец вспомогательных элементов в Cover */
 
 /* Карточки с лотами */
 
@@ -208,17 +219,11 @@
   justify-content: space-between;
   background-size: cover;
   background-position: center;
+  background-color: #a7a7a7;
   background-repeat: no-repeat;
 }
 
-.card_type_film,
-.card_type_book,
-.card_type_picture {
-  background-repeat: no-repeat;
-  background-color: #a7a7a7;
-  background-position: center;
-  background-size: cover;
-}
+
 
 .card_type_film {
   background-image: url("../images/card-lot-01.jpg");
@@ -234,6 +239,7 @@
 
 .card__title {
   font-size: 22px;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -263,7 +269,7 @@
 .about {
   display: grid;
   grid-template-columns: min-content 1fr;
-  padding: 181px 50px 90px 50px;
+  padding: 134px 50px 90px 50px;
   column-gap: 28px;
 }
 
@@ -287,7 +293,7 @@
   margin-top: 102px;
   margin-bottom: 100px;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 39px;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -299,7 +305,7 @@
 }
 
 .about__text:not(:last-of-type) {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 /* Конец поледней секции */
@@ -356,7 +362,6 @@
   flex-wrap: wrap;
   justify-self: end;
   align-items: center;
-  max-width: 240px;
   list-style: none;
   gap: 20px 48px;
 }
